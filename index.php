@@ -1,9 +1,9 @@
 <?php 
 
-if(isset($_GET['m']) && !empty($_GET['m'])){
+if(isset($_GET['k']) && !empty($_GET['k'])){
     $k = '0100101001100101011100110111010101110011';
     $cof = md5($k);
-    $fee = $_GET['m'];
+    $fee = $_GET['k'];
 
     if($cof == $fee) {
         $method = $_SERVER['REQUEST_METHOD'];
@@ -57,10 +57,10 @@ function _post(){
     echo json_encode($result);   
 }
 
-function _error($m){
+function _error($e){
     $result = array();
     $out['result'] = false;
-    $out['error'] = $m;
+    $out['error'] = $e;
     
     array_push($result, $out);
     echo json_encode($result);
