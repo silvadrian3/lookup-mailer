@@ -1,1 +1,1 @@
-# lookup-mailer
+Generic email-sender API using PHPMailer
